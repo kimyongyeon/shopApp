@@ -2,13 +2,15 @@ package com.kyy.shop.shopapp.infra.customer;
 
 import com.kyy.shop.shopapp.domain.entity.CustomerEntity;
 import com.kyy.shop.shopapp.domain.service.customer.repo.CustomerStorable;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 @Component
+@RequiredArgsConstructor
 public class CustomerStorableImpl implements CustomerStorable {
 
-    CustomerRepository repository;
+    private final CustomerRepository repository;
 
     @Override
     public void save(CustomerEntity customerEntity) {

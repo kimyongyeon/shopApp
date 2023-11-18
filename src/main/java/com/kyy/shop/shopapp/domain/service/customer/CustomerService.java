@@ -9,6 +9,9 @@ public interface CustomerService {
     // 회원가입
     void register(CustomerDTO customer);
 
+    // 회원조회
+    CustomerEntity getCustomer(String userId);
+
     // 회원수정
     void modify(String userId, CustomerEntity customer);
 

@@ -28,6 +28,11 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
+    public CustomerEntity getCustomer(String userId) {
+        return readable.findByUserId(userId);
+    }
+
+    @Override
     public void modify(String userId, CustomerEntity customer) {
 
     }

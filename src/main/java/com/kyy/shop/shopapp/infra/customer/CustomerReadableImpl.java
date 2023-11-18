@@ -2,14 +2,16 @@ package com.kyy.shop.shopapp.infra.customer;
 
 import com.kyy.shop.shopapp.domain.entity.CustomerEntity;
 import com.kyy.shop.shopapp.domain.service.customer.repo.CustomerReadable;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
 
 @Component
+@RequiredArgsConstructor
 public class CustomerReadableImpl implements CustomerReadable {
 
-    private CustomerRepository repository;
+    private final CustomerRepository repository;
 
     @Override
     public CustomerEntity findByUserId(String userId) {
